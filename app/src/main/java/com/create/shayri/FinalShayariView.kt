@@ -67,7 +67,11 @@ fun FinalShayariViewScreen(
                         .fillMaxWidth()
                         .height(299.dp)
                         .padding(20.dp)
-                        .border(2.dp, Color.Gray, RoundedCornerShape(10.dp)) // Border with color and shape
+                        .border(
+                            2.dp,
+                            Color.Gray,
+                            RoundedCornerShape(10.dp)
+                        ) // Border with color and shape
                         .clickable {
                             navController?.popBackStack()
                         }
@@ -88,7 +92,6 @@ fun FinalShayariViewScreen(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-
                         .padding(20.dp)
 
                 ) {
@@ -134,7 +137,6 @@ fun FinalShayariViewScreen(
                                         androidx.compose.ui.text.AnnotatedString(
                                             finalShayari.toString()
                                         )
-
                                     )
                                     Toast
                                         .makeText(content, "Copied", Toast.LENGTH_SHORT)

@@ -52,7 +52,9 @@ fun ShayariListScreen(navController: NavHostController? = null, title: String? =
                 MainToolBar(title = title.toString()) {
                     navController?.popBackStack()
                 }
+                /*Create Filter List For Showing Shayari "it.title" use for filter the list*/
                 val myFinaList = getListOfCategory().filter { it.title == title.toString() }
+                /*This val use for get the first list Size*/
                 val finalList = myFinaList[0]
 
                 finalList.list?.let { list ->

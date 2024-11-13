@@ -13,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.create.shayri.routing.ShayariRoutingItem
@@ -49,6 +48,7 @@ fun SplashScreen(navController: NavHostController) {
         }
         /* TODO : Handler for splash screen*/
         /*Handler use for delay the screen in navigation*/
+        /*Use of looper.getMainLooper() for get the current thread*/
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             navController.navigate(ShayariRoutingItem.categoryScreen.route)
         }, 3000)

@@ -30,6 +30,7 @@ fun ShayariRouting(navController: NavHostController ) {
         }
 
         /*Use For Shayari List Screen Routing*/
+        /*To Pass The Argument Use { }*/
         composable(ShayariRoutingItem.shayariListScreen.route + "/{title}") {
             val title = it.arguments?.getString("title")
             ShayariListScreen(navController, title.toString())
